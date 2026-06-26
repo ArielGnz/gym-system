@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>Sistema Gym</h1>
+      <h1>Sistema de Gimnasio</h1>
     </>
   );
 }
