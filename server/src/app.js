@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
-  res.send("Backend no funcionando");
+  res.send("Backend funcionando");
 });
 
 module.exports = app;
