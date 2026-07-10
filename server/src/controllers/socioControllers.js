@@ -1,4 +1,4 @@
-const socio = require ("../models/Socio");
+const Socio = require ("../models/Socio");
 
 const crearSocio = async ( req, res ) =>{
     try {

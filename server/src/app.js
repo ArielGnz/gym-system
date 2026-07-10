@@ -9,6 +9,15 @@ app.use(cors());
 app.use(express.json());
 
 app.use(socioRoutes);
+
+app.use("/socios", socioRoutes);
+
+// app.post("/test", (req, res) => {
+//   res.json({
+//     mensaje: "Ruta funcionando",
+//   });
+// });
+
 app.get("/", (req, res) => {
   res.send("Backend funcionando");
 });
