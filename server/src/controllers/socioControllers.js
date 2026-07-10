@@ -11,6 +11,19 @@ const crearSocio = async ( req, res ) =>{
 
 }
 
+const obtenerSocios = async (req, res) => {
+  try {
+    const socios = await Socio.findAll();
+
+    res.status(200).json(socios);
+  } catch (error) {
+    res.status(500).json({
+      error: error.message,
+    });
+  }
+};
+
 module.exports = {
-    crearSocio
+    crearSocio,
+    obtenerSocios,
 };
