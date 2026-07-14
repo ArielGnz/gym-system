@@ -14,6 +14,7 @@ function FormularioSocio({
       <h2>Nuevo Socio</h2>
 
       <input
+        classname="border rounded-lg px-3 py-2 w-full"
         type="text"
         placeholder="Nombre"
         value={nombre}
@@ -24,6 +25,7 @@ function FormularioSocio({
       <br />
 
       <input
+        classname="border rounded-lg px-3 py-2 w-full"
         type="text"
         placeholder="Apellido"
         value={apellido}
@@ -34,6 +36,7 @@ function FormularioSocio({
       <br />
 
       <input
+        classname="border rounded-lg px-3 py-2 w-full"
         type="text"
         placeholder="DNI"
         value={dni}
@@ -44,6 +47,7 @@ function FormularioSocio({
       <br />
 
       <input
+        classname="border rounded-lg px-3 py-2 w-full"
         type="text"
         placeholder="Teléfono"
         value={telefono}
@@ -53,7 +57,8 @@ function FormularioSocio({
       <br />
       <br />
 
-      <button onClick={guardarSocio}>
+      <button onClick={guardarSocio}
+      className="bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer">
         Guardar Socio
       </button>
     </div>

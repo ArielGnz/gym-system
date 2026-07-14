@@ -46,29 +46,28 @@ function App() {
 
 
   return (
-    <div>
-      
-      <h1 className="text-4xl font-bold text-blue-600">
-        Sistema de Gimnasio
-      </h1>
+    <div className="min-h-screen bg-slate-100">
+      <div className="max-w-6xl mx-auto p-6">
+        <h1 className="text-4xl font-bold mb-8">
+          Sistema de Gimnasio
+        </h1>
 
-      <FormularioSocio
-        nombre={nombre}
-        setNombre={setNombre}
-        apellido={apellido}
-        setApellido={setApellido}
-        dni={dni}
-        setDni={setDni}
-        telefono={telefono}
-        setTelefono={setTelefono}
-        guardarSocio={guardarSocio}
-      />
+        <FormularioSocio
+          nombre={nombre}
+          setNombre={setNombre}
+          apellido={apellido}
+          setApellido={setApellido}
+          dni={dni}
+          setDni={setDni}
+          telefono={telefono}
+          setTelefono={setTelefono}
+          guardarSocio={guardarSocio}
+        />
 
-      <ListaSocios socios={socios} />
-
-
+        <ListaSocios socios={socios} />
+      </div>
     </div>
-  );
+);
 }
 
 export default App
