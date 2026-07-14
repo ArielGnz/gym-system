@@ -44,6 +44,15 @@ function App() {
   }
 };
 
+const eliminarSocio = async (id) => {
+  try {
+    await api.delete(`/socios/${id}`);
+    obtenerSocios();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
   return (
     <div className="min-h-screen bg-slate-100">
