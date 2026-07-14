@@ -23,7 +23,23 @@ const obtenerSocios = async (req, res) => {
   }
 };
 
+const eliminarSocio = async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    await Socio.destroy({
+      where: { id },
+    });
+
+    res.status(200).json({ message: "Socio Eliminado"});
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
 module.exports = {
     crearSocio,
     obtenerSocios,
+    eliminarSocio,
 };
