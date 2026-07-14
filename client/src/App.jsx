@@ -73,7 +73,9 @@ const eliminarSocio = async (id) => {
           guardarSocio={guardarSocio}
         />
 
-        <ListaSocios socios={socios} />
+        <ListaSocios 
+          socios={socios} 
+          eliminarSocio={eliminarSocio}   />
       </div>
     </div>
 );

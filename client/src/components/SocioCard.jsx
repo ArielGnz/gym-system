@@ -1,4 +1,4 @@
-function SocioCard({ socio}) {
+function SocioCard({ socio, eliminarSocio }) {
     return (
         <div classname="card">
             <h3>
@@ -7,6 +7,10 @@ function SocioCard({ socio}) {
 
             <p>DNI: {socio.dni}</p>
             <p>Teléfono: {socio.telefono}</p>
+
+            <button onClick={() => eliminarSocio(socio.id)}
+                className="bg-red-600 text-white px-4 py-2 rounded-lg"> Eliminar
+            </button>
 
         </div>
     )

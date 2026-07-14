@@ -1,6 +1,6 @@
 import SocioCard from "./SocioCard";
 
-function ListaSocios({ socios }) {
+function ListaSocios({ socios, eliminarSocio }) {
   return (
     <div>
       <h2>Lista de Socios</h2>
@@ -9,6 +9,7 @@ function ListaSocios({ socios }) {
         <SocioCard
          key={socio.id}
          socio={socio}
+         eliminarSocio={eliminarSocio}
         />
 ))}
     </div>
