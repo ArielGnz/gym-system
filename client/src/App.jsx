@@ -5,6 +5,7 @@ import ListaSocios from "./components/ListaSocios";
 
 function App() {
   const [socios, setSocios] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
 
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
@@ -52,6 +53,16 @@ const eliminarSocio = async (id) => {
     console.error(error);
   }
 }
+
+const sociosFiltrados = socios.filter((socio) => {
+  const texto = busqueda.toLocaleLowerCase();
+
+  return (
+    socio.nombre.toLocaleLowerCase().includes(texto) ||
+    socio.apellido.toLocaleLowerCase().includes(texto) ||
+    socio.dni.toLocaleLowerCase().includes(texto)
+  );
+}) 
 
 
   return (
