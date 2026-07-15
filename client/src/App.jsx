@@ -84,6 +84,16 @@ const sociosFiltrados = socios.filter((socio) => {
           guardarSocio={guardarSocio}
         />
 
+        <div className="mb-6">
+          <input 
+            type="text"
+            placeholder="Buscar socio..."
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+
         <ListaSocios 
           socios={socios} 
           eliminarSocio={eliminarSocio}   />
