@@ -62,6 +62,7 @@ const sociosFiltrados = socios.filter((socio) => {
     socio.apellido.toLocaleLowerCase().includes(texto) ||
     socio.dni.toLocaleLowerCase().includes(texto)
   );
+
 }) 
 
 
@@ -94,8 +95,12 @@ const sociosFiltrados = socios.filter((socio) => {
           />
         </div>
 
+        <div>
+          <h1>Socios encontrados: {sociosFiltrados.length}</h1>
+        </div>
+
         <ListaSocios 
-          socios={socios} 
+          socios={sociosFiltrados} 
           eliminarSocio={eliminarSocio}   />
       </div>
     </div>
