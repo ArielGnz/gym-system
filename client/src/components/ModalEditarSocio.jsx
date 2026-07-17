@@ -8,4 +8,12 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenersocios }) {
     const [dni, setDni] = useState(socio.dni);
     const [telefono, setTelefono] = useState(socio.telefono);
 
+    return (
+        <div>
+            Modal
+        </div>
+    )
+
 } 
+
+export default ModalEditarSocio;
