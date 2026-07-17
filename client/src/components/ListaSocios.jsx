@@ -1,6 +1,6 @@
 import SocioCard from "./SocioCard";
 
-function ListaSocios({ socios, eliminarSocio }) {
+function ListaSocios({ socios, eliminarSocio, setSocioEditando }) {
   return (
     <div>
       <h2>Lista de Socios</h2>

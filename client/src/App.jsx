@@ -103,7 +103,8 @@ const sociosFiltrados = socios.filter((socio) => {
 
         <ListaSocios 
           socios={sociosFiltrados} 
-          eliminarSocio={eliminarSocio}   
+          eliminarSocio={eliminarSocio}
+          setSocioEditando={setSocioEditando}   
         />
 
         {socioEditando && (

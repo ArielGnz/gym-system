@@ -1,4 +1,4 @@
-function SocioCard({ socio, eliminarSocio }) {
+function SocioCard({ socio, eliminarSocio, setSocioEditando }) {
     return (
         <div classname="card">
             <h3>
@@ -10,6 +10,10 @@ function SocioCard({ socio, eliminarSocio }) {
 
             <button onClick={() => eliminarSocio(socio.id)}
                 className="bg-red-600 text-white px-4 py-2 rounded-lg"> Eliminar
+            </button>
+
+            <button onClick={() => setSocioEditando(socio)}
+                className="bg-yellow-500 text-white px-4 py-2 rounded-lg mr-2"> Editar
             </button>
 
         </div>
