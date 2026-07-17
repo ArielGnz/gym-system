@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import api from './services/api';
 import FormularioSocio from "./components/FormularioSocio";
 import ListaSocios from "./components/ListaSocios";
+import ModalEditarSocio from './components/ModalEditarSocio';
 
 function App() {
   const [socios, setSocios] = useState([]);
   const [busqueda, setBusqueda] = useState("");
+  const [socioEditando, setSocioEditando] = useState(null);
 
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
@@ -101,7 +103,17 @@ const sociosFiltrados = socios.filter((socio) => {
 
         <ListaSocios 
           socios={sociosFiltrados} 
-          eliminarSocio={eliminarSocio}   />
+          eliminarSocio={eliminarSocio}   
+        />
+
+        {socioEditando && (
+          <ModalEditarSocio
+            socio = {socioEditando}
+            setSocioEditando = {setSocioEditando}
+            obtenersocios = {obtenerSocios}
+          />
+        )}
+
       </div>
     </div>
 );
