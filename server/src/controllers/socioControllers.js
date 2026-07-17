@@ -38,8 +38,24 @@ const eliminarSocio = async (req, res) => {
   }
 }
 
+const actualizarSocio = async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    await Socio.update(req.body, {
+      where: { id },
+    });
+
+    res.status(200).json({ message: "Socio Actualizado"});
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
 module.exports = {
     crearSocio,
     obtenerSocios,
     eliminarSocio,
+    actualizarSocio,
 };
