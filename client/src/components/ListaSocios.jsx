@@ -10,6 +10,7 @@ function ListaSocios({ socios, eliminarSocio, setSocioEditando }) {
          key={socio.id}
          socio={socio}
          eliminarSocio={eliminarSocio}
+         setSocioEditando={setSocioEditando}
         />
 ))}
     </div>
