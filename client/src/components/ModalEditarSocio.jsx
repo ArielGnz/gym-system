@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../services/api";
 
-function ModalEditarSocio ({ socio, setSocioEditando, obtenersocios }) {
+function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
 
     const [nombre, setNombre] = useState(socio.nombre);
     const [apellido, setApellido] = useState(socio.apellido);
@@ -16,6 +16,10 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenersocios }) {
                 dni,
                 telefono,
             });
+
+            await obtenerSocios();
+            setSocioEditando(null);
+
         } catch (error) {
             console.error(error);
         }
@@ -35,7 +39,7 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenersocios }) {
                     <input 
                         type="text"
                         value={nombre}
-                        onchange={(e) => setNombre(e.target.value)}
+                        onChange={(e) => setNombre(e.target.value)}
                         placeholder="Nombre"
                         className="w-full border rounded-lg px-3 py-2"
                     />
@@ -43,26 +47,30 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenersocios }) {
                     <input 
                         type="text"
                         value={apellido}
-                        onchange={(e) => setApellido(e.target.value)}
+                        onChange={(e) => setApellido(e.target.value)}
                         placeholder="Apellido"
                         className="w-full border rounded-lg px-3 py-2"
                     />
                     <input 
                         type="text"
                         value={dni}
-                        onchange={(e) => setDni(e.target.value)}
+                        onChange={(e) => setDni(e.target.value)}
                         placeholder="DNI"
                         className="w-full border rounded-lg px-3 py-2"
                     />
                     <input 
                         type="text"
                         value={telefono}
-                        onchange={(e) => setTelefono(e.target.value)}
+                        onChange={(e) => setTelefono(e.target.value)}
                         placeholder="Teléfono"
                         className="w-full border rounded-lg px-3 py-2"
                     />
 
                 </div>
+
+                <button onClick={actualizarSocio} className="w-full bg-blue-600 text-white py-2 rounded-lg mt-4">
+                    Actualizar Socio
+                </button>
             </div>
         </div>
     )
