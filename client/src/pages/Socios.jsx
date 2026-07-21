@@ -15,51 +15,42 @@ function Socios() {
     const [dni, setDni] = useState("");
     const [telefono, setTelefono] = useState("");
 
-  useEffect(() =>{
-    obtenerSocios();
-  }, []);
+    useEffect(() =>{
+        obtenerSocios();
+    }, []);
 
-  const { socios, setSocios, obtenerSocios } = useSocios();
+    const { 
+         socios,
+         setSocios, 
+         obtenerSocios, 
+         guardarSocio, 
+         eliminarSocio 
+    } = useSocios();
 
-  const guardarSocio = async () => {
-  try {
-    await api.post("/socios", {
-      nombre,
-      apellido,
-      dni,
-      telefono,
-    });
+    const handleGuardarSocio = async () => {
+        await guardarSocio({
+            nombre,
+            apellido,
+            dni,
+            telefono,
+        });
 
-    obtenerSocios();
+        setNombre("");
+        setApellido("");
+        setDni("");
+        setTelefono("");
+    };
 
-    setNombre("");
-    setApellido("");
-    setDni("");
-    setTelefono("");
-  } catch (error) {
-    console.error(error);
-  }
-};
+    const sociosFiltrados = socios.filter((socio) => {
+        const texto = busqueda.toLocaleLowerCase();
 
-const eliminarSocio = async (id) => {
-  try {
-    await api.delete(`/socios/${id}`);
-    obtenerSocios();
-  } catch (error) {
-    console.error(error);
-  }
-}
+        return (
+            socio.nombre.toLocaleLowerCase().includes(texto) ||
+            socio.apellido.toLocaleLowerCase().includes(texto) ||
+            socio.dni.toLocaleLowerCase().includes(texto)
+        );
 
-const sociosFiltrados = socios.filter((socio) => {
-  const texto = busqueda.toLocaleLowerCase();
-
-  return (
-    socio.nombre.toLocaleLowerCase().includes(texto) ||
-    socio.apellido.toLocaleLowerCase().includes(texto) ||
-    socio.dni.toLocaleLowerCase().includes(texto)
-  );
-
-}) 
+    }) 
 
 
   return (
@@ -78,7 +69,7 @@ const sociosFiltrados = socios.filter((socio) => {
           setDni={setDni}
           telefono={telefono}
           setTelefono={setTelefono}
-          guardarSocio={guardarSocio}
+          guardarSocio={handleGuardarSocio}
         />
 
         <div className="mb-6">
