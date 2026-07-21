@@ -1,8 +1,9 @@
-import { usestate } from "react";
+import { useState } from "react";
 import api from "../services/api";
 
 export function useSocios() {
-    const [socios, setsocios] = usestate([]);
+    
+    const [socios, setSocios] = useState([]);
 
     const obtenerSocios = async () => {
         try {

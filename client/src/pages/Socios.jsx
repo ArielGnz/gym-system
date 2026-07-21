@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import api from '../services/api';
+import { useSocios } from "../hooks/useSocios";
 import FormularioSocio from "../components/FormularioSocio";
 import ListaSocios from "../components/ListaSocios";
 import ModalEditarSocio from '../components/ModalEditarSocio';
 
 function Socios() {
 
-    const [socios, setSocios] = useState([]);
     const [busqueda, setBusqueda] = useState("");
     const [socioEditando, setSocioEditando] = useState(null);
 
@@ -19,14 +19,7 @@ function Socios() {
     obtenerSocios();
   }, []);
 
-  const obtenerSocios = async () => {
-    try {
-      const response = await api.get("/socios");
-      setSocios(response.data);
-    } catch (error) {
-      console.error("Error al obtener los socios:", error);
-    }
-  };
+  const { socios, setSocios, obtenerSocios } = useSocios();
 
   const guardarSocio = async () => {
   try {

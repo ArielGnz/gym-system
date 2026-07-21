@@ -1,6 +1,6 @@
 function SocioCard({ socio, eliminarSocio, setSocioEditando }) {
     return (
-        <div classname="card">
+        <div className="card">
             <h3>
                 {socio.nombre} {socio.apellido}
             </h3>
