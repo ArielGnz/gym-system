@@ -8,6 +8,20 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenersocios }) {
     const [dni, setDni] = useState(socio.dni);
     const [telefono, setTelefono] = useState(socio.telefono);
 
+    const actualizarSocio = async () => {
+        try {
+            await api.put(`/socios/${socio.id}`,{
+                nombre,
+                apellido,
+                dni,
+                telefono,
+            });
+        } catch (error) {
+            console.error(error);
+        }
+        
+    }
+
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
             <div className="bg-white p-6 rounded-xl w-full max-w-md">
