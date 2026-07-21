@@ -1,14 +1,19 @@
 import { useEffect, useState } from 'react';
-import api from './services/api';
-import FormularioSocio from "./components/FormularioSocio";
-import ListaSocios from "./components/ListaSocios";
-import ModalEditarSocio from './components/ModalEditarSocio';
+import api from '../services/api';
+import FormularioSocio from "../components/FormularioSocio";
+import ListaSocios from "../components/ListaSocios";
+import ModalEditarSocio from '../components/ModalEditarSocio';
 
-function App() {
-    
-  const [socios, setSocios] = useState([]);
-  const [busqueda, setBusqueda] = useState("");
-  const [socioEditando, setSocioEditando] = useState(null);
+function Socios() {
+
+    const [socios, setSocios] = useState([]);
+    const [busqueda, setBusqueda] = useState("");
+    const [socioEditando, setSocioEditando] = useState(null);
+
+    const [nombre, setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
+    const [dni, setDni] = useState("");
+    const [telefono, setTelefono] = useState("");
 
   useEffect(() =>{
     obtenerSocios();
@@ -107,7 +112,7 @@ const sociosFiltrados = socios.filter((socio) => {
           <ModalEditarSocio
             socio = {socioEditando}
             setSocioEditando = {setSocioEditando}
-            obtenersocios = {obtenerSocios}
+            obtenerSocios = {obtenerSocios}
           />
         )}
 
@@ -116,4 +121,4 @@ const sociosFiltrados = socios.filter((socio) => {
 );
 }
 
-export default App
+export default Socios;
