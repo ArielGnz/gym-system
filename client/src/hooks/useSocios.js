@@ -15,9 +15,29 @@ export function useSocios() {
         }
     }
 
+    const guardarSocio = async (nuevoSocio) => {
+        try {
+            await api.post("/socios", nuevoSocio);
+            await obtenerSocios();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    const eliminarSocio = async (id) => {
+        try {
+            await api.delete(`/socios/${id}`);
+            await obtenerSocios();
+        } catch (error) {
+             console.error(error);
+        }
+    };
+
     return { 
         socios,
         setSocios, 
         obtenerSocios,
+        guardarSocio,
+        eliminarSocio
     };
 }
