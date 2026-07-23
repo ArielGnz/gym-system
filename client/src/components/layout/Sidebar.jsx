@@ -3,6 +3,15 @@ import { logo } from "../../assets/logo.png";
 import {FaHome, FaUsers, FaMoneyBill, FaClipboardCheck, FaDumbbell, FaCog } from "react-icons/fa";
 
 function Sidebar() {
+
+  const linkClass = ({ isActive }) => 
+    `flex items-center gap-3 p-3 rounded-lg transittion-colors ${
+      isActive
+        ? "bg-blue-600 text-white"
+        : "hover:bg-slate-700"
+
+  }`;
+
   return (
     <aside className="w-64 bg-slate-800 text-white min-h-screen p-4">
       <h2 className="text-2xl font-bold mb-8">
