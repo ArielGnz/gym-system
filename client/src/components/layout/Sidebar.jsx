@@ -14,9 +14,16 @@ function Sidebar() {
 
   return (
     <aside className="w-64 bg-slate-800 text-white min-h-screen p-4">
-      <h2 className="text-2xl font-bold mb-8">
-        Funcional Training
-      </h2>
+      
+      <div clasName="flex flex-col items-center mb-8">
+        <img src={logo} alt="Logo" className="w-20 h-20 object-contain mb-3" />
+        <h2 className="text-xl font-bold text-center">
+          Funcional Training
+        </h2>
+
+      </div>
+      
+      
 
       <nav className="flex flex-col gap-2">
         <Link
