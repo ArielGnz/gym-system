@@ -1,16 +1,44 @@
 import { NavLink } from "react-router-dom";
-import { logo } from "../../assets/logo.png";
+import  logo  from "../../assets/logo.png";
 import {FaHome, FaUsers, FaMoneyBill, FaClipboardCheck, FaDumbbell, FaCog } from "react-icons/fa";
 
 function Sidebar() {
 
   const linkClass = ({ isActive }) => 
-    `flex items-center gap-3 p-3 rounded-lg transittion-colors ${
+    `flex items-center gap-3 p-3 rounded-lg transition-colors ${
       isActive
         ? "bg-blue-600 text-white"
         : "hover:bg-slate-700"
 
   }`;
+
+  const menu = [
+    {
+      nombre: "Dashboard",
+      ruta: "/",
+      icono: FaHome,
+    },
+    {
+      nombre: "Socios",
+      ruta: "/socios",
+      icono: FaUsers,
+    },
+    {
+      nombre: "Pagos",
+      ruta: "/pagos",
+      icono: FaMoneyBill,
+    },
+    {
+      nombre: "Asistencias",
+      ruta: "/asistencias",
+      icono: FaClipboardCheck,
+    },
+    {
+      nombre: "Rutinas",
+      ruta: "/rutinas",
+      icono: FaDumbbell,
+    }
+  ]
 
   return (
     <aside className="w-64 bg-slate-800 text-white min-h-screen p-4">
@@ -26,40 +54,40 @@ function Sidebar() {
       
 
       <nav className="flex flex-col gap-2">
-        <Link
+        <NavLink
           to="/"
           className="p-2 rounded hover:bg-slate-700"
         >
           Dashboard
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/socios"
           className="p-2 rounded hover:bg-slate-700"
         >
           Socios
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/pagos"
           className="p-2 rounded hover:bg-slate-700"
         >
           Pagos
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/asistencias"
           className="p-2 rounded hover:bg-slate-700"
         >
           Asistencias
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/rutinas"
           className="p-2 rounded hover:bg-slate-700"
         >
           Rutinas
-        </Link>
+        </NavLink>
       </nav>
     </aside>
   );
