@@ -12,34 +12,6 @@ function Sidebar() {
 
   }`;
 
-  const menu = [
-    {
-      nombre: "Dashboard",
-      ruta: "/",
-      icono: FaHome,
-    },
-    {
-      nombre: "Socios",
-      ruta: "/socios",
-      icono: FaUsers,
-    },
-    {
-      nombre: "Pagos",
-      ruta: "/pagos",
-      icono: FaMoneyBill,
-    },
-    {
-      nombre: "Asistencias",
-      ruta: "/asistencias",
-      icono: FaClipboardCheck,
-    },
-    {
-      nombre: "Rutinas",
-      ruta: "/rutinas",
-      icono: FaDumbbell,
-    }
-  ]
-
   return (
     <aside className="w-64 bg-slate-800 text-white min-h-screen p-4">
       
