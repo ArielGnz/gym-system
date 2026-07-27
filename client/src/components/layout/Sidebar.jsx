@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import  logo  from "../../assets/logo.png";
-import {FaHome, FaUsers, FaMoneyBill, FaClipboardCheck, FaDumbbell, FaCog } from "react-icons/fa";
+import menu from "../../constants/menu";
 
 function Sidebar() {
 

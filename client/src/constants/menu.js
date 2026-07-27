@@ -1,5 +1,6 @@
+import {FaHome, FaUsers, FaMoneyBill, FaClipboardCheck, FaDumbbell, FaCog } from "react-icons/fa";
 
-const menu = [
+export const menu = [
     {
       nombre: "Dashboard",
       ruta: "/",
