@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import  logo  from "../../assets/logo.png";
-import menu from "../../constants/menu";
+import { menu } from "../../constants/menu";
 
 function Sidebar() {
 
