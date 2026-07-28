@@ -4,6 +4,7 @@ import api from "../services/api";
 export function useSocios() {
     
     const [socios, setSocios] = useState([]);
+    const cantidadSocios = socios.length;
 
     const obtenerSocios = async () => {
         try {
@@ -38,6 +39,7 @@ export function useSocios() {
         setSocios, 
         obtenerSocios,
         guardarSocio,
-        eliminarSocio
+        eliminarSocio,
+        cantidadSocios,
     };
 }

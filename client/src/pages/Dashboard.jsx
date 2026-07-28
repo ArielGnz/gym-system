@@ -1,13 +1,20 @@
 import Layout from "../components/layout/Layout";
 import StatCard from "../components/common/StatCard";
 import { FaUsers, FaMoneyBill, FaDumbbell } from "react-icons/fa";
+import { useSocios } from "../hooks/useSocios";
+import { useEffect } from "react";
 
 function Dashboard() {
+
+    const {
+        obtenerSocios,
+        cantidadSocios,
+    } = useSocios();
 
     const estadisticas = [
         {
             titulo: "Total Socios",
-            valor: "0",
+            valor: cantidadSocios,
             icono: <FaUsers />
         },
         {
@@ -21,6 +28,10 @@ function Dashboard() {
             icono: <FaDumbbell />
         }
     ];
+
+    useEffect(() => {
+        obtenerSocios();
+    }, []);
 
     return (
         <Layout>
