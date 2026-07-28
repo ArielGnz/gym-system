@@ -49,6 +49,7 @@ function Dashboard() {
                         titulo={item.titulo}
                         valor={item.valor}
                         icono={item.icono}
+                        color={item.color}
                     />
                 ))}
             </div>
