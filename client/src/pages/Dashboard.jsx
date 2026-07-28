@@ -15,17 +15,20 @@ function Dashboard() {
         {
             titulo: "Total Socios",
             valor: cantidadSocios,
-            icono: <FaUsers />
+            icono: <FaUsers />,
+            color: "bg-blue-600",
         },
         {
             titulo: "Pagos",
             valor: "0",
-            icono: <FaMoneyBill />
+            icono: <FaMoneyBill />,
+            color: "bg-green-600"
         },
         {
             titulo: "Rutinas",
             valor: "0",
-            icono: <FaDumbbell />
+            icono: <FaDumbbell />,
+            color: "bg-purple-600",
         }
     ];
 

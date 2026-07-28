@@ -12,8 +12,10 @@ const StatCard = ({ titulo, valor, icono, color }) => {
                 </h2>
                 </div>
 
-                <div className="text-4xl">
-                {icono}
+                <div
+                    className={`${color} p-4 rounded-xl text-white text-3xl`}
+                >
+                    {icono}
                 </div>
             </div>
         </div>
