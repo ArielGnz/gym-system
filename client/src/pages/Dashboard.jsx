@@ -1,5 +1,6 @@
 import Layout from "../components/layout/Layout";
 import StatCard from "../components/common/StatCard";
+import WelcomeCard from "./Dashboard/WelcomeCard";
 import { FaUsers, FaMoneyBill, FaDumbbell } from "react-icons/fa";
 import { useSocios } from "../hooks/useSocios";
 import { useEffect } from "react";
@@ -38,10 +39,9 @@ function Dashboard() {
 
     return (
         <Layout>
-            <h1 className="text-3xl font-bold mb-6">
-                Dashboard
-            </h1>
 
+            <WelcomeCard/>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {estadisticas.map((item) => (
                     <StatCard
