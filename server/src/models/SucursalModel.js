@@ -1,5 +1,5 @@
-import { DataTypes } from "sequelize";
-import sequelize from "../config/database.js";
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
 const Sucursal = sequelize.define(
   "Sucursal",
@@ -37,4 +37,4 @@ const Sucursal = sequelize.define(
   }
 );
 
-export default Sucursal;
+module.exports = Sucursal;
