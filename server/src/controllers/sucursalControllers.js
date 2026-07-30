@@ -29,15 +29,19 @@ const eliminarSucursal = async (req,res) => {
     }
 }
 
-const actualizarSucursal = (req, res) => {
-    try {
-        const { id } = req.params;
-        await Sucursal.update(req.body, { where: {id},});
-        res.json({ message: "Sucursal Actualizada"});
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-}
+const actualizarSucursal = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    await Sucursal.update(req.body, {
+      where: { id },
+    });
+
+    res.json({ message: "Sucursal actualizada" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
 module.exports = {
     crearSucursal,

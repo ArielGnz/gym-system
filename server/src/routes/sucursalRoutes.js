@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const {
     crearSucursal,
-    obtenerSucursal,
+    obtenerSucursales,
     eliminarSucursal,
-    acualizarSucursal,
+    actualizarSucursal,
 } = require("../controllers/sucursalControllers");
 
 router.get("/", obtenerSucursales);

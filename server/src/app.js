@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const socioRoutes = require("./routes/socioRoutes");
+const sucursalRoutes = require("./routes/sucursalRoutes");
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(express.json());
 app.use(socioRoutes);
 
 app.use("/socios", socioRoutes);
+app.use("/sucursales", sucursalRoutes);
 
 // app.post("/test", (req, res) => {
 //   res.json({
