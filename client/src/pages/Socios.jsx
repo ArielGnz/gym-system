@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../services/api';
 import { useSocios } from "../hooks/useSocios";
+import { useSucursales } from '../hooks/useSucursales';
 import FormularioSocio from "../components/FormularioSocio";
 import ListaSocios from "../components/ListaSocios";
 import ModalEditarSocio from '../components/ModalEditarSocio';
@@ -10,6 +11,7 @@ function Socios() {
 
     const [busqueda, setBusqueda] = useState("");
     const [socioEditando, setSocioEditando] = useState(null);
+    const [sucursalId, setSucursalId] = useState("");
 
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
@@ -18,6 +20,7 @@ function Socios() {
 
     useEffect(() =>{
         obtenerSocios();
+        obtenerSucursales();
     }, []);
 
     const { 
@@ -27,6 +30,11 @@ function Socios() {
          guardarSocio, 
          eliminarSocio 
     } = useSocios();
+
+    const {
+        sucursales,
+        obtenerSucursales
+    } = useSucursales();
 
     const handleGuardarSocio = async () => {
         await guardarSocio({
