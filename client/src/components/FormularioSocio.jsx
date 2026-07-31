@@ -8,6 +8,9 @@ function FormularioSocio({
   telefono,
   setTelefono,
   guardarSocio,
+  sucursalId,
+  setSucursalId,
+  sucusales,
 }) {
   return (
     <div>
@@ -53,6 +56,22 @@ function FormularioSocio({
         value={telefono}
         onChange={(e) => setTelefono(e.target.value)}
       />
+
+      <select 
+        value={sucursalId}
+        onChange={(e) => setSucursalId(e.target.value)}
+        className="border rounded-lg px-3 py-2 w-full"
+      >
+        <option value=""> Seleccione una sucursal </option>
+        {sucusales.map((sucursal) => (
+          <option
+            key={sucursalId}
+            value={sucursalId}
+          >
+            {sucursal.nombre}
+          </option>
+        ) )}
+      </select>
 
       <br />
       <br />
