@@ -5,14 +5,19 @@ function ListaSocios({ socios, eliminarSocio, setSocioEditando }) {
     <div>
       <h2>Lista de Socios</h2>
 
-      {socios.map((socio) => (
-        <SocioCard
-         key={socio.id}
-         socio={socio}
-         eliminarSocio={eliminarSocio}
-         setSocioEditando={setSocioEditando}
-        />
-))}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+        {socios.map((socio) => (
+          <SocioCard
+          key={socio.id}
+          socio={socio}
+          eliminarSocio={eliminarSocio}
+          setSocioEditando={setSocioEditando}
+          />
+        ))}
+
+      </div>
+      
     </div>
   );
 }
