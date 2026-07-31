@@ -1,4 +1,5 @@
 const Socio = require ("../models/Socio");
+const Sucursal = require("../models/SucursalModel");
 
 const crearSocio = async ( req, res ) =>{
     try {
@@ -13,7 +14,11 @@ const crearSocio = async ( req, res ) =>{
 
 const obtenerSocios = async (req, res) => {
   try {
-    const socios = await Socio.findAll();
+    const socios = await Socio.findAll({
+      include: {
+        model: Sucursal,
+      },
+    });
 
     res.status(200).json(socios);
   } catch (error) {

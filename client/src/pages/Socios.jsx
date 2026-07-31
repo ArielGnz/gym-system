@@ -42,12 +42,14 @@ function Socios() {
             apellido,
             dni,
             telefono,
+            sucursalId,
         });
 
         setNombre("");
         setApellido("");
         setDni("");
         setTelefono("");
+        setSucursalId("");
     };
 
     const sociosFiltrados = socios.filter((socio) => {
@@ -71,15 +73,18 @@ function Socios() {
                 </h1>
 
                 <FormularioSocio
-                nombre={nombre}
-                setNombre={setNombre}
-                apellido={apellido}
-                setApellido={setApellido}
-                dni={dni}
-                setDni={setDni}
-                telefono={telefono}
-                setTelefono={setTelefono}
-                guardarSocio={handleGuardarSocio}
+                    nombre={nombre}
+                    setNombre={setNombre}
+                    apellido={apellido}
+                    setApellido={setApellido}
+                    dni={dni}
+                    setDni={setDni}
+                    telefono={telefono}
+                    setTelefono={setTelefono}
+                    sucusales={sucursales}
+                    sucursalId={sucursalId}
+                    setSucursalId={setSucursalId}
+                    guardarSocio={handleGuardarSocio}
                 />
 
                 <div className="mb-6">

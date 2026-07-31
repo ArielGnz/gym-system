@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../services/api";
-import { eliminarSocio } from "../../../server/src/controllers/socioControllers";
-import { eliminarSucursal } from "../../../server/src/controllers/sucursalControllers";
+//import { eliminarSocio } from "../../../server/src/controllers/socioControllers";
+//import { eliminarSucursal } from "../../../server/src/controllers/sucursalControllers";
 
 export function useSucursales() {
     
@@ -25,7 +25,7 @@ export function useSucursales() {
         }
     };
 
-    const elminiarSucursal = async (id) => {
+    const eliminarSucursal = async (id) => {
         try {
             await api.delete(`/sucursales/${id}`);
             await obtenerSucursales();
