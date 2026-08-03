@@ -2,6 +2,7 @@ const app = require("./app");
 const sequelize = require("./config/database");
 const Socio = require("./models/Socio");
 const Sucursal = require("./models/SucursalModel");
+const Plan = require("./models/Plan");
 
 const PORT = 3001;
 
