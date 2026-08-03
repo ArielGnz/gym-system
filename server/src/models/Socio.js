@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const Sucursal = require("./SucursalModel");
 
 const Socio = sequelize.define('Socio', {
   id: {
@@ -28,19 +27,20 @@ const Socio = sequelize.define('Socio', {
   sucursalId: {
   type: DataTypes.INTEGER,
   allowNull: true,
-  references: {
-    model: "sucursales",
-    key: "id",
+    references: {
+      model: "sucursales",
+      key: "id",
+    }
   },
-},
-});
+  planId: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    references: {
+      model: "planes",
+      key: "id",
+    },
+  },
 
-Sucursal.hasMany(Socio, {
-  foreignKey: "sucursalId",
-});
-
-Socio.belongsTo(Sucursal, {
-  foreignKey: "sucursalId",
 });
 
 module.exports = Socio;
