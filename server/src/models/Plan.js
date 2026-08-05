@@ -25,6 +25,14 @@ const Plan = sequelize.define(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        sucursalId: {
+            type: DataTypes.INTEGER,
+            allownull: false,
+            references: {
+                model: "sucursales",
+                key: "id",
+            },
+        }
     },
     {
         tableName: "planes",
