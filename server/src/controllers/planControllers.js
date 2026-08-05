@@ -20,4 +20,28 @@ const obtenerPlanes = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
+
+const actualizarPlan = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Plan.update(req.body, {
+            where: { id },
+        });
+        res.status(200).json({ message: "Plan actualizado" });
+    } catch (error) {
+        res.status(500).json({ message: error.message });   
+    }
+};
+
+const eliminarPlan = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Plan.destroy({
+            where: { id },
+        });
+        res.status(200).json({ message: "Plan eliminado" });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
