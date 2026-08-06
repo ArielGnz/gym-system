@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import api from '../services/api';
 import { useSocios } from "../hooks/useSocios";
 import { useSucursales } from '../hooks/useSucursales';
-import FormularioSocio from "../components/FormularioSocio";
-import ListaSocios from "../components/ListaSocios";
-import ModalEditarSocio from '../components/ModalEditarSocio';
+import FormularioSocio from "../components/socios/FormularioSocio";
+import ListaSocios from "../components/socios/ListaSocios";
+import ModalEditarSocio from '../components/socios/ModalEditarSocio';
 import Layout from '../components/layout/Layout';
 
 function Socios() {
