@@ -1,6 +1,6 @@
 import Layout from "../components/layout/Layout";
 import StatCard from "../components/common/StatCard";
-import WelcomeCard from "./Dashboard/WelcomeCard";
+import WelcomeCard from "../components/common/WelcomeCard";
 import { FaUsers, FaMoneyBill, FaDumbbell } from "react-icons/fa";
 import { useSocios } from "../hooks/useSocios";
 import { useEffect } from "react";
