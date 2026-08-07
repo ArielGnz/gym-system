@@ -1,4 +1,6 @@
 import { FaBuilding } from "react-icons/fa";
+import Card from "../common/Card";
+import Button from "../common/Button";
 
 function SocioCard({ socio, eliminarSocio, setSocioEditando }) {
     return (

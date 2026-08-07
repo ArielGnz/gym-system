@@ -1,14 +1,15 @@
+
 const Select = ({
     label,
     value,
     onChange,
-    options,
+    options =[],
 }) => {
     return (
         <div className="mb-4">
-            {label && 
+            {label && (
                 <label className="block mb-1 font-medium">{label}</label>
-            }
+            )}
 
             <select
                 value={value}
