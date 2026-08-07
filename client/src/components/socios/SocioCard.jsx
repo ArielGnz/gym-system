@@ -2,7 +2,7 @@ import { FaBuilding } from "react-icons/fa";
 
 function SocioCard({ socio, eliminarSocio, setSocioEditando }) {
     return (
-        <div className="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition">
+        <Card>
             <h3>
                 {socio.nombre} {socio.apellido}
             </h3>
@@ -16,17 +16,17 @@ function SocioCard({ socio, eliminarSocio, setSocioEditando }) {
 
             <div className="flex gap-2 mt-4">
 
-                <button onClick={() => setSocioEditando(socio)}
-                    className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg transition"> Editar
-                </button>
+                <Button onClick={() => setSocioEditando(socio)}
+                    variant="warning"> Editar
+                </Button>
 
-                <button onClick={() => eliminarSocio(socio.id)}
-                    className="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg transition"> Eliminar
-                </button>
+                <Button onClick={() => eliminarSocio(socio.id)}
+                    variant="danger"> Eliminar
+                </Button>
 
             </div>
 
-        </div>
+        </Card>
     )
 }
 
