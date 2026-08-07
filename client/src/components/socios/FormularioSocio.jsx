@@ -16,9 +16,8 @@ function FormularioSocio({
     <div>
       <h2>Nuevo Socio</h2>
 
-      <input
-        className="border rounded-lg px-3 py-2 w-full"
-        type="text"
+      <Input
+        label="Nombre"
         placeholder="Nombre"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
@@ -27,9 +26,8 @@ function FormularioSocio({
       <br />
       <br />
 
-      <input
-        className="border rounded-lg px-3 py-2 w-full"
-        type="text"
+      <Input
+        label="Apellido"
         placeholder="Apellido"
         value={apellido}
         onChange={(e) => setApellido(e.target.value)}
@@ -38,9 +36,8 @@ function FormularioSocio({
       <br />
       <br />
 
-      <input
-        className="border rounded-lg px-3 py-2 w-full"
-        type="text"
+      <Input
+        label="DNI"
         placeholder="DNI"
         value={dni}
         onChange={(e) => setDni(e.target.value)}
@@ -49,18 +46,16 @@ function FormularioSocio({
       <br />
       <br />
 
-      <input
-        className="border rounded-lg px-3 py-2 w-full"
-        type="text"
+      <Input
+        label="Teléfono"
         placeholder="Teléfono"
         value={telefono}
         onChange={(e) => setTelefono(e.target.value)}
       />
 
-      <select 
+      <Select 
         value={sucursalId}
         onChange={(e) => setSucursalId(e.target.value)}
-        className="border rounded-lg px-3 py-2 w-full"
       >
         <option value=""> Seleccione una sucursal </option>
         {sucusales.map((sucursal) => (
@@ -71,15 +66,14 @@ function FormularioSocio({
             {sucursal.nombre}
           </option>
         ) )}
-      </select>
+      </Select>
 
       <br />
       <br />
 
-      <button onClick={guardarSocio}
-        className="bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer">
+      <Button onClick={guardarSocio}>
         Guardar Socio
-      </button>
+      </Button>
     </div>
   );
 }
