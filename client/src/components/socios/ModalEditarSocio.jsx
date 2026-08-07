@@ -27,7 +27,7 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
     }
 
     return (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
+        <Modal>
             <div className="bg-white p-6 rounded-xl w-full max-w-md">
                 <div className="flex justify-end">
                     <button onClick={() => setSocioEditando(null)}
@@ -36,7 +36,7 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
                 </div>
                 <h2 className="text-2xl font-bold mb-4">Editar Socio</h2>
                 <div className="space-y-3">
-                    <input 
+                    <Input 
                         type="text"
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)}
@@ -44,21 +44,21 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
                         className="w-full border rounded-lg px-3 py-2"
                     />
 
-                    <input 
+                    <Input 
                         type="text"
                         value={apellido}
                         onChange={(e) => setApellido(e.target.value)}
                         placeholder="Apellido"
                         className="w-full border rounded-lg px-3 py-2"
                     />
-                    <input 
+                    <Input 
                         type="text"
                         value={dni}
                         onChange={(e) => setDni(e.target.value)}
                         placeholder="DNI"
                         className="w-full border rounded-lg px-3 py-2"
                     />
-                    <input 
+                    <Input 
                         type="text"
                         value={telefono}
                         onChange={(e) => setTelefono(e.target.value)}
@@ -72,7 +72,7 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
                     Actualizar Socio
                 </button>
             </div>
-        </div>
+        </Modal>
     )
 
 } 
