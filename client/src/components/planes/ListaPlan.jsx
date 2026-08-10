@@ -21,3 +21,5 @@ const ListaPlan = ({ planes, eliminarPlan, setPlanEditando }) => {
         </div>
     )
 }
+
+export default ListaPlan;
