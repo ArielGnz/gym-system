@@ -31,7 +31,14 @@ const usePlanes = () => {
         }
     }
 
-    
+    const actualizarPlan = async (id, plan) => {
+        try {
+            await api.put(`/planes/${id}`, plan);
+            await obtenerPlanes();
+        } catch (error) {
+            console.error("Error al actualizar el plan:", error);
+        }
+    }
 
-    
+    return { planes, obtenerPlanes, guardarPlan, eliminarPlan, actualizarPlan };
 }
