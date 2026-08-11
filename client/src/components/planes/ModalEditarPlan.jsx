@@ -40,10 +40,49 @@ const ModalEditarPlan = ({
                 
                 </button>
                 
-
             </div>
+
+            <Input 
+                label="Nombre"
+                value={nombre}
+                onchange={(e) => setNombre(e.target.value)}
+            />
+
+            <Input
+                label="Descripción"
+                value={descripcion}
+                onchange={(e) => setDescripcion(e.target.value)}
+                
+            />
+
+            <Input
+                label="Precio"
+                type="number"
+                value={precio}
+                onchange={(e) => setPrecio(e.target.value)}
+            />
+
+            <Input
+                label="Duración (días)"
+                type="number"
+                value={duracionDias}
+                onchange={(e) => setDuracionDias(e.target.value)}
+            />
+
+            <Select
+                label="Sucursal"
+                value={sucursalId}
+                onChange={(e) => setSucursalId(e.target.value)}
+                options={sucursal}
+            />
+
+            <Button onClick={handleActualizar}>
+                Actualizar Plan
+            </Button>
         
         </Modal>
-    )
+    );
 
 }
+
+export default ModalEditarPlan;
