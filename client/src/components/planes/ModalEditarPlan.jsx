@@ -14,6 +14,24 @@ const ModalEditarPlan = ({
     const [descripcion, setDescripcion] = useState(plan.descripcion);
     const [precio, setPrecio] = useState(plan.precio);
     const [duracionDias, setDuracionDias] = useState(plan.duracionDias);
-    const [sucursalId, setSucursalId] = useState(plan.sucursalId);   
+    const [sucursalId, setSucursalId] = useState(plan.sucursalId); 
+    
+    const handleActualizar = async () => {
+        await actualizarPlan(plan.id, {
+            nombre,
+            descripcion,
+            precio,
+            duracionDias,
+            sucursalId
+        });
+
+        setPlanEditando(null);
+    };
+
+    return (
+        <Modal>
+            
+        </Modal>
+    )
 
 }
