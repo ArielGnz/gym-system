@@ -34,7 +34,7 @@ export function useSucursales() {
         }
     };
 
-    const actualzarSucursales = async (id, datos) => {
+    const actualizarSucursales = async (id, datos) => {
         try {
             await api.put(`/sucursales/${id}`, datos);
             await obtenerSucursales();
@@ -48,7 +48,7 @@ export function useSucursales() {
         obtenerSucursales,
         guardarSucursales,
         eliminarSucursal,
-        actualzarSucursales,
+        actualizarSucursales,
     };
 
 }

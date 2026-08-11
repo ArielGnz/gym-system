@@ -81,3 +81,5 @@ const Planes = () => {
     );
 
 }
+
+export default Planes;
