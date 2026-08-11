@@ -30,7 +30,19 @@ const ModalEditarPlan = ({
 
     return (
         <Modal>
-            
+
+            <div className="flex justify-between items-center mb-4">
+
+                <h2 className="text-2xl font-bold">Editar Plan</h2>
+
+                <button onClick={() => setPlanEditando(null)}
+                        className="text-gray-500 text-xl"> ✕
+                
+                </button>
+                
+
+            </div>
+        
         </Modal>
     )
 
