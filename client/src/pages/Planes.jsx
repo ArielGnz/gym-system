@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Layout from "../components/common/Layout";
+import Layout from "../components/layout/Layout";
 import FormularioPlan from "../components/planes/FormularioPlan";
-import ListaPlanes from "../components/planes/ListaPlanes";
+import ListaPlan from "../components/planes/ListaPlan";
 import ModalEditarPlan from "../components/planes/ModalEditarPlan";
 import { usePlanes } from "../hooks/usePlanes";
 import { useSucursales } from "../hooks/useSucursales";
@@ -23,6 +23,7 @@ const Planes = () => {
     const [precio, setPrecio] = useState("");
     const [duracionDias, setDuracionDias] = useState("");
     const [sucursalId, setSucursalId] = useState("");
+    const [planEditando, setPlanEditando] = useState(null);
 
     const handleGuardarPlan = async () => {
         await guardarPlan({
@@ -39,6 +40,11 @@ const Planes = () => {
         setDuracionDias("");
         setSucursalId("");
     }
+
+    useEffect(() => {
+        obtenerPlanes();
+        obtenerSucursales();
+    }, []);
 
     return (
         <Layout>
@@ -59,10 +65,10 @@ const Planes = () => {
                 sucursalId={sucursalId}
                 setSucursalId={setSucursalId}
                 sucursales={sucursales}
-                handleGuardarPlan={handleGuardarPlan}
+                GuardarPlan={handleGuardarPlan}
             />
 
-            <ListaPlanes 
+            <ListaPlan 
                 planes={planes} 
                 eliminarPlan={eliminarPlan}
                 setPlanEditando={setPlanEditando}

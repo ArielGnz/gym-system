@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../services/api";
 
-const usePlanes = () => {
+export const usePlanes = () => {
     const [planes, setPlanes] = useState([]);
 
     const obtenerPlanes = async () => {
