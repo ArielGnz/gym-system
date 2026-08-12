@@ -65,7 +65,7 @@ const Planes = () => {
                 sucursalId={sucursalId}
                 setSucursalId={setSucursalId}
                 sucursales={sucursales}
-                GuardarPlan={handleGuardarPlan}
+                guardarPlan={handleGuardarPlan}
             />
 
             <ListaPlan 
