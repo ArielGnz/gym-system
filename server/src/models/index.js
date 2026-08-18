@@ -31,8 +31,21 @@ Socio.hasMany(Pago, {
     foreignKey: 'socioId',
 });
 
+Pago.belongsTo(Socio, {
+    foreignKey: 'socioId',
+});
+
+Plan.hasMany(Pago, {
+    foreignKey: 'planId',
+});
+
+Pago.belongsTo(Plan, {
+    foreignKey: 'planId',
+});
+
 module.exports = {
   Socio,
   Sucursal,
   Plan,
+  Pago,
 };

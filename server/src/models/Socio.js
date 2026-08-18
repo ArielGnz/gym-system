@@ -42,8 +42,6 @@ const Socio = sequelize.define('Socio', {
     },
   },
 
-  
-
 });
 
 module.exports = Socio;
