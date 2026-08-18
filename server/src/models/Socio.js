@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
+const Pago = require('./Pago');
 
 const Socio = sequelize.define('Socio', {
   id: {
@@ -40,6 +41,8 @@ const Socio = sequelize.define('Socio', {
       key: "id",
     },
   },
+
+  
 
 });
 
