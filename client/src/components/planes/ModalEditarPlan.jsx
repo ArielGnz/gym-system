@@ -45,13 +45,13 @@ const ModalEditarPlan = ({
             <Input 
                 label="Nombre"
                 value={nombre}
-                onchange={(e) => setNombre(e.target.value)}
+                onChange={(e) => setNombre(e.target.value)}
             />
 
             <Input
                 label="Descripción"
                 value={descripcion}
-                onchange={(e) => setDescripcion(e.target.value)}
+                onChange={(e) => setDescripcion(e.target.value)}
                 
             />
 
@@ -59,14 +59,14 @@ const ModalEditarPlan = ({
                 label="Precio"
                 type="number"
                 value={precio}
-                onchange={(e) => setPrecio(e.target.value)}
+                onChange={(e) => setPrecio(e.target.value)}
             />
 
             <Input
                 label="Duración (días)"
                 type="number"
                 value={duracionDias}
-                onchange={(e) => setDuracionDias(e.target.value)}
+                onChange={(e) => setDuracionDias(e.target.value)}
             />
 
             <Select
