@@ -97,3 +97,32 @@ const actualizarPago = async (req, res) => {
     }
 }
 
+const eliminarPago = async (req, res) => {
+    try {
+        
+        const {id} = req.params;
+
+        const pago = await Pago.findByPk(id);
+
+        if(!pago) {
+            return res.status(404).json({
+                error: "Pago no encontrado"
+            });
+        }
+
+        await pago.destroy();
+
+        res.status(200).json({message: "Pago Eliminado"});
+
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+}
+
+module.exports = {
+    obtenerPagos, 
+    obtenerPagoId,
+    crearPago,
+    actualizarPago,
+    eliminarPago,
+}
