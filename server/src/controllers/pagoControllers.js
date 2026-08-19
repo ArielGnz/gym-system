@@ -46,3 +46,54 @@ const obtenerPagoId = async (req, res) => {
         res.status(500).json({error: error.message});
     }
 }
+
+const crearPago = async (req, res) => {
+    try {
+
+        const {
+            fechaPago,
+            fechaVencimiento,
+            importe,
+            estado,
+            socioId,
+            planId,
+        } = req.body;
+
+        const pago = await Pago.create({
+            fechaPago,
+            fechaVencimiento, 
+            importe,
+            estado,
+            socioId,
+            planId
+        });
+
+        res.status(201).json(pago);
+
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+}
+
+const actualizarPago = async (req, res) => {
+    try {
+        
+        const { id } = req.params;
+        
+        const pago = await Pago.findByPk(id);
+
+        if(!pago) {
+            return res.status(404).json({
+                error: "Pago no encontrado"
+            });
+        }
+
+        await pago.update(req.body);
+
+        res.status(200).json({message: "Pago Actualizado", pago});
+
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+}
+
