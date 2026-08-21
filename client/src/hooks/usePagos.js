@@ -24,4 +24,31 @@ export const usePagos = () => {
         }
     }
 
+    const actualizarPago = async (id, pagoActualizado) => {
+        try {
+            await api.put(`/pagos/${id}`, pagoActualizado);
+            await obtenerPagos();
+        } catch (error) {
+            console.error("Erro al actualizar el Pago:",error)
+        }
+    }
+
+    const eliminarPago = async (id) => {
+        try {
+            await api.delete(`/pagos/${id}`);
+            await obtenerPagos();
+        } catch (error) {
+            console.error("Error al eliminar el Pago:", error);
+        }
+    }
+
+    return {
+        pagos,
+        setPagos,
+        obtenerPagos,
+        guardarPago,
+        actualizarPago,
+        eliminarPago,
+    }
+
 }
