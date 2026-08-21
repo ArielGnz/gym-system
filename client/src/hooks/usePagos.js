@@ -15,6 +15,13 @@ export const usePagos = () => {
         }
     }
 
-    
+    const guardarPago = async (nuevoPago) => {
+        try {
+            await api.post("/pagos", nuevoPago);
+            await obtenerPagos();
+        } catch (error) {
+            console.error("Error al guardar el pago:", error);
+        }
+    }
 
 }
