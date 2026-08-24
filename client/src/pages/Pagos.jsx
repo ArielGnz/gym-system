@@ -57,7 +57,64 @@ const Pagos = () => {
 
     return (
         <Layout>
-            
+            <h1 className="text-3xl font-bold mb-6"> Pagos </h1>
+
+            <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+                <h2 className="text-xl font-bold mb-4"> Registrar Pago </h2>
+
+                {/* Socio */}
+                <div className="mb-4">
+                    <label className="block mb-1 font-medium">Socio</label>
+
+                    <select
+                        className="w-full border rounded-lg px-3 py-2"
+                        value={socioId}
+                        onChange={(e) => setSocioId(e.target.value)}
+                    >
+                        <option value="">Seleccione una Opcion</option>
+                        {socios.map((socio) =>{
+                            <option 
+                                value={socio.id}
+                                key={socio.id}                            
+                            >
+                                {socio.nombre} {socio.apellido}
+                            </option>
+                        })}
+
+                    </select>
+                </div>
+
+                {/* Plan */}
+                <div className="mb-4">
+                    <label className="block mb-1 font-medium">Plan</label>
+
+                    <select 
+                        value={planId}
+                        onChange={(e) => setPlanId(e.target.value)}
+                        className="w-full border rounded-lg px-3 py-2"
+                    >
+                        <option value="">Seleccionar un Plan</option>
+
+                        {planes.map((plan) =>(
+                            <option
+                                key={plan.id}
+                                value={plan.id}
+                            >
+                                {plan.nombre}
+                            </option>
+                        ))
+
+                        }
+
+                    </select>
+                </div>
+
+                {/* Fecha de Pago */}
+
+                div
+
+            </div>
+
         </Layout>
     )
 
