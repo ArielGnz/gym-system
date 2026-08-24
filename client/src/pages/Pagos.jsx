@@ -37,5 +37,28 @@ const Pagos = () => {
         obtenerPlanes();
     }, []);
 
+    const handleGuardarPago = async () => {
+        await guardarPago({
+            fechaPago,
+            fechaVencimiento,
+            importe,
+            estado,
+            socioId,
+            planId,
+        });
+
+        setFechaPago("");
+        setFechaVencimiento("");
+        setImporte("");
+        setEstado("PAGADO");
+        setSocioId("");
+        setPlanId("");
+    }
+
+    return (
+        <Layout>
+            
+        </Layout>
+    )
 
 }
