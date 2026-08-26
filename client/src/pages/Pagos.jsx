@@ -137,41 +137,52 @@ const Pagos = () => {
 
                     {/* Importe */}
 
-                    <div className="mb-4">
-                        <label className="block mb-1 font-medium">Importe</label>
+                </div>
 
-                        <input
+                {/* Importe */}
+
+                <div className="mb-4">
+                    <label className="block mb-1 font-medium">Importe</label>
+
+                    <input
                             type="number"
                             value={importe}
                             onChange={(e) => setImporte(e.target.value)}
                             placeholder="Importe del Pago"
                             className="w-full border rounded-lg px-3 py-2"
-                        />
+                    />
 
-                    </div>
+                </div>
 
-                    {/* Estado */}
+                {/* Estado */}
 
-                    <div className="mb-4">
-                        <label className="block mb-1 font-medium"> Estado </label>
+                <div className="mb-4">
+                    <label className="block mb-1 font-medium"> Estado </label>
 
-                        <select 
+                    <select 
                             value={estado}
                             onChange={(e) => setEstado(e.target.value)}
                             className="w-full border rounded-lg px-3 py-2"
-                        >
-                            <option value="PAGADO"> PAGADO </option>
-                            <option value="VENCIDO"> VENCIDO </option>
+                    >
+                        <option value="PAGADO"> PAGADO </option>
+                        <option value="VENCIDO"> VENCIDO </option>
 
-                        </select>
-
-                    </div>
+                    </select>
 
                 </div>
+
+                <button
+                        onClick={handleGuardarPago}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
+                >
+                        Registrar Pago
+                </button>
 
             </div>
 
         </Layout>
-    )
+    );
 
 }
+
+export default Pagos;
