@@ -72,14 +72,14 @@ const Pagos = () => {
                         onChange={(e) => setSocioId(e.target.value)}
                     >
                         <option value="">Seleccione una Opcion</option>
-                        {socios.map((socio) =>{
+                        {socios.map((socio) => (
                             <option 
                                 value={socio.id}
                                 key={socio.id}                            
                             >
                                 {socio.nombre} {socio.apellido}
                             </option>
-                        })}
+                        ))}
 
                     </select>
                 </div>
@@ -95,7 +95,7 @@ const Pagos = () => {
                     >
                         <option value="">Seleccionar un Plan</option>
 
-                        {planes.map((plan) =>(
+                        {planes.map((plan) => (
                             <option
                                 key={plan.id}
                                 value={plan.id}

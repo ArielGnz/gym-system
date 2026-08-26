@@ -9,10 +9,10 @@ function ListaSocios({ socios, eliminarSocio, setSocioEditando }) {
 
         {socios.map((socio) => (
           <SocioCard
-          key={socio.id}
-          socio={socio}
-          eliminarSocio={eliminarSocio}
-          setSocioEditando={setSocioEditando}
+            key={socio.id}
+            socio={socio}
+            eliminarSocio={eliminarSocio}
+            setSocioEditando={setSocioEditando}
           />
         ))}
 
