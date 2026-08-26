@@ -4,7 +4,7 @@ import api from "../services/api";
 
 export const usePagos = () => {
 
-    const [pagos, setPagos] = usestate([]);
+    const [pagos, setPagos] = useState([]);
 
     const obtenerPagos = async () => {
         try {

@@ -28,7 +28,7 @@ const Pagos = () => {
     const [fechaVencimiento, setFechaVencimiento] = useState("");
     const [importe, setImporte] = useState("");
     const [estado, setEstado] = useState("PAGADO");
-    const [socio, setSocioId] = useState("");
+    const [socioId, setSocioId] = useState("");
     const [planId, setPlanId] = useState("");
 
     useEffect(() =>{
