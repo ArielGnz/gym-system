@@ -35,9 +35,24 @@ const FormularioPago = ({
                 value={socioId}
                 onChange={(e) => setSocioId(e.target.value)}
                 options={opcionesSocios}
-            >
+            />
 
-            </Select>
+            
+                
+            <Select
+                label="plan"
+                value={planId}
+                onChange={(e) => setPlanId(e.target.value)}
+                options={planes}
+            />
+
+            <Select 
+                label="Fecha de Pago"
+                type="date"
+                value={fechaPago}
+                onChange={(e) => setFechaPago(e.target.value)}
+            />
+                
 
         </div>
     )
