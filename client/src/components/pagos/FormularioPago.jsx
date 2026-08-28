@@ -70,7 +70,7 @@ const FormularioPago = ({
                 value={estado}
                 onChange={(e) => setEstado(e.target.value)}
                 options={[
-                    {id: "PAGADO", nombre: "PAGADO"}
+                    {id: "PAGADO", nombre: "PAGADO"},
                     {id: "VENCIDO", nombre: "VENCIDO"}
                 ]}
             />
@@ -80,7 +80,7 @@ const FormularioPago = ({
             </Button>        
 
         </div>
-    );
+    )
 }
 
 export default FormularioPago;
