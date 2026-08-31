@@ -1,8 +1,9 @@
-
+import Button from "../common/Button";
+import Card from "../common/Card";
 
 const PagoCard = ({pago, eliminarPago, setPagoEditando}) => {
     return(
-        <div className="bg-white rounded-xl shadow-md p-4 mb-4">
+        <Card>
             <h3 className="font-bold text-lg">
                 {pago.Socio?.nombre} {pago.Socio?.apellido}
             </h3>
@@ -19,22 +20,22 @@ const PagoCard = ({pago, eliminarPago, setPagoEditando}) => {
 
             <div className="mt-3 flex gap-2">
                 
-                <button
+                <Button
                     onClick={() => setPagoEditando(pago)}
-                    className="bg-yellow-500 text-white px-4 py-2 rounded-lg"
+                    variant="warning"
                 >
                     Editar
-                </button>
+                </Button>
 
-                <button
+                <Button
                     onClick={() => eliminarPago(pago.id)}
-                    className="bg-red-600 text-white px-4 py-2 rounded-lg"
+                    variant="danger"
                 >
                     Eliminar
-                </button>
+                </Button>
 
             </div>
-        </div>
+        </Card>
     )
 }
 
