@@ -80,9 +80,28 @@ const ModalEditarPago = ({
                     onChange={(e) => setFechaVencimiento(e.target.value)}
                 />
 
+                <Input
+                    label="importe"
+                    date="number"
+                    value={importe}
+                    onChange={(e => setImporte(e.target.value))}
+                />
+
+                <Select 
+                    label="Estado"
+                    value={estado}
+                    onChange={(e) => setEstado(e.target.value)}
+                    options={[
+                        {id: "PAGADO", nombre: "PAGADO"},
+                        {id: "VENCIDO", nombre: "VENCIDO"}
+                    ]}
+                />
+
+                <Button onClick={handleActualizar}>Actualizar Pago</Button>
+
             </Modal>
         </div>
     )
-
-
 }
+
+export default ModalEditarPago;
