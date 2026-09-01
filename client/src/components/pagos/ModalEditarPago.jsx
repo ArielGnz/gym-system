@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../common/Input";
 import Select from "../common/Select";
 import Button from "../common/Button";
+import Modal from "../common/Modal";
 
 const ModalEditarPago = ({
     pago,
@@ -36,7 +37,52 @@ const ModalEditarPago = ({
         setPagoEditando(null);
     }
 
-    
+    return (
+        <div>
+            <Modal>
+                <div className="flex justify-end">
+                    <button 
+                        onClick={() => setPagoEditando(null)}
+                        className="text-gray-500 text-xl"
+                    >
+                        X
+                    </button>
+                
+                </div>
+
+                <h2 className="text-2xl font-bold mb-4">Editar Pago</h2>
+
+                <Select
+                    label="Socio"
+                    value={socioId}
+                    onChange={(e) => setSocioId(e.target.value)}
+                    options={opcionesSocios}
+                />
+
+                <Select
+                    label="Plan"
+                    value={planId}
+                    onChange={(e) => setPlanId(e.target.value)}
+                    options={planes}
+                />
+
+                <Input
+                    label="Fecha de Pago"
+                    type="date"
+                    value={fechaPago}
+                    onChange={(e) => setFechaPago(e.target.value)}
+                />
+
+                <Input
+                    label="Fecha de Vencimiento"
+                    type="date"
+                    value={fechaVencimiento}
+                    onChange={(e) => setFechaVencimiento(e.target.value)}
+                />
+
+            </Modal>
+        </div>
+    )
 
 
 }
