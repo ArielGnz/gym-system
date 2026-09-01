@@ -1,9 +1,11 @@
-import { useEffe, useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout";
+import FormularioPago from "../components/pagos/FormularioPago";
+import ListaPagos from "../components/pagos/ListaPagos";
+import ModalEditarPago from "../components/pagos/ModalEditarPago";
 import { usePagos } from "../hooks/usePagos";
 import { useSocios } from "../hooks/useSocios";
 import { usePlanes } from "../hooks/usePlanes";
-import { useEffect } from "react";
 
 const Pagos = () => {
     const {
@@ -30,6 +32,7 @@ const Pagos = () => {
     const [estado, setEstado] = useState("PAGADO");
     const [socioId, setSocioId] = useState("");
     const [planId, setPlanId] = useState("");
+    const [pagoEditando, setPagoEditando] = usetState(null);
 
     useEffect(() =>{
         obtenerPagos();
