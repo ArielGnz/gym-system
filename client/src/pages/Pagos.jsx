@@ -32,7 +32,7 @@ const Pagos = () => {
     const [estado, setEstado] = useState("PAGADO");
     const [socioId, setSocioId] = useState("");
     const [planId, setPlanId] = useState("");
-    const [pagoEditando, setPagoEditando] = usetState(null);
+    const [pagoEditando, setPagoEditando] = useState(null);
 
     useEffect(() =>{
         obtenerPagos();

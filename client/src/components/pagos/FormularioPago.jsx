@@ -54,7 +54,8 @@ const FormularioPago = ({
             <Input 
                 label="Fecha de Vencimiento"
                 type="date"
-                value={(e) => setFechaVencimiento(e.target.value)}
+                value={fechaVencimiento}
+                onChange={(e) => setFechaVencimiento(e.target.value)}
             />
 
             <Input 

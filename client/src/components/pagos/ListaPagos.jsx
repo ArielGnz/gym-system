@@ -1,10 +1,10 @@
 import PagoCard from "./PagoCard";
 
-const ListaPagos = (
+const ListaPagos = ({
     pagos, 
     eliminarPago, 
     setPagoEditando
-) => {
+}) => {
     return (
         <div>
 
