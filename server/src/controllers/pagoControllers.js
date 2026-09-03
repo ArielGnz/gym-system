@@ -1,15 +1,32 @@
 const { Pago, Socio, Plan } = require('../models');
 
+// const obtenerPagos = async (req, res) => {
+//     try {
+//         const pagos = await Pago.findAll({
+//             incclude: [
+//                 {
+//                     model: Socio,
+//                 },
+//                 {
+//                     model: Plan,
+//                 },
+//             ],
+//             order: [["fechaPago", "DESC"]]
+//         });
+
+//         res.status(200).json(pagos);
+
+//     } catch (error) {
+//         res.status(500).json({error: error.message})
+//     }
+// }
+
 const obtenerPagos = async (req, res) => {
     try {
         const pagos = await Pago.findAll({
             incclude: [
-                {
-                    model: Socio,
-                },
-                {
-                    model: Plan,
-                },
+                Socio,
+                Plan,
             ],
             order: [["fechaPago", "DESC"]]
         });

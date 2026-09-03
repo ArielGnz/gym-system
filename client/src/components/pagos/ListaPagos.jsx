@@ -3,7 +3,7 @@ import PagoCard from "./PagoCard";
 const ListaPagos = ({
     pagos, 
     eliminarPago, 
-    setPagoEditando
+    setPagoEditando,   
 }) => {
     return (
         <div>

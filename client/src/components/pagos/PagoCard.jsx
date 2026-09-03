@@ -5,7 +5,7 @@ const PagoCard = ({pago, eliminarPago, setPagoEditando}) => {
     return(
         <Card>
             <h3 className="font-bold text-lg">
-                {pago.Socio?.nombre} {pago.Socio?.apellido}
+                Socio: {pago.Socio?.nombre} {pago.Socio?.apellido}
             </h3>
 
             <p>Plan: {pago.Plan?.nombre} </p>
