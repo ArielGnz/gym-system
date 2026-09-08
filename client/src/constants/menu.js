@@ -1,4 +1,4 @@
-import {FaHome, FaUsers, FaMoneyBill, FaClipboardCheck, FaDumbbell, FaCog } from "react-icons/fa";
+import {FaHome, FaUsers, FaMoneyBill, FaClipboardCheck, FaDumbbell, FaCog, FaBuilding } from "react-icons/fa";
 
 export const menu = [
     {
@@ -25,5 +25,11 @@ export const menu = [
       nombre: "Rutinas",
       ruta: "/rutinas",
       icono: FaDumbbell,
+    },
+    {
+    nombre: "Sucursales",
+    ruta: "/sucursales",
+    icono: FaBuilding,
     }
+
   ]
