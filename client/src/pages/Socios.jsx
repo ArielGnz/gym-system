@@ -112,6 +112,7 @@ function Socios() {
                     socio = {socioEditando}
                     setSocioEditando = {setSocioEditando}
                     obtenerSocios = {obtenerSocios}
+                    sucursales = {sucursales}
                 />
                 )}
 

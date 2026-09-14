@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+import Select from "../common/Select";
 
 function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
 
@@ -66,6 +67,13 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
                         onChange={(e) => setTelefono(e.target.value)}
                         placeholder="Teléfono"
                         className="w-full border rounded-lg px-3 py-2"
+                    />
+
+                    <Select
+                        label="Sucursal"
+                        value={sucursalId}
+                        onChange={(e) => setSucursalId(e.target.value)}
+                        options={sucursales}
                     />
 
                 </div>
