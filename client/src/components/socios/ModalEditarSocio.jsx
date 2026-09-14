@@ -7,6 +7,7 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
     const [apellido, setApellido] = useState(socio.apellido);
     const [dni, setDni] = useState(socio.dni);
     const [telefono, setTelefono] = useState(socio.telefono);
+    const [sucursalId, setSucursalId] = useState(socio.sucursalId);
 
     const actualizarSocio = async () => {
         try {
@@ -15,6 +16,7 @@ function ModalEditarSocio ({ socio, setSocioEditando, obtenerSocios }) {
                 apellido,
                 dni,
                 telefono,
+                sucursalId,
             });
 
             await obtenerSocios();

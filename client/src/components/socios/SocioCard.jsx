@@ -13,7 +13,7 @@ function SocioCard({ socio, eliminarSocio, setSocioEditando }) {
             <p>Teléfono: {socio.telefono}</p>
             <div className="flex items-center gap-2">
                 <FaBuilding />
-                <span>{socio.Sucursal?.nombre}</span>
+                <span>{socio.Sucursal?.nombre || "Sin sucursal" }</span>
             </div>
 
             <div className="flex gap-2 mt-4">
