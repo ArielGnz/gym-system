@@ -7,6 +7,7 @@ export function useEstadisticas() {
         pagosDelMes: 0,
         pagosVencidos: 0,
         pagosPorVencer: 0,
+        ultimosPagos: [],
     });
 
     const obtenerEstadisticas = async () => {
@@ -69,6 +70,7 @@ export function useEstadisticas() {
                 pagosDelMes: pagosDelMes.length,
                 pagosVencidos: pagosVencidos.length,
                 pagosPorVencer: pagosPorVencer.length,
+                ultimosPagos: pagos.slice(0, 5),
             });
 
         } catch (error) {
