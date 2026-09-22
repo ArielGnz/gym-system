@@ -17,6 +17,7 @@ function Dashboard() {
         pagosDelMes,
         pagosVencidos,
         pagosPorVencer,
+        ultimosPagos,
         obtenerEstadisticas,
     } = useEstadisticas();
 
@@ -66,6 +67,10 @@ function Dashboard() {
                         color={item.color}
                     />
                 ))}
+            </div>
+
+            <div className="mt-8">
+                <UltimosPagos pagos={ultimosPagos} />
             </div>
 
         </Layout>
