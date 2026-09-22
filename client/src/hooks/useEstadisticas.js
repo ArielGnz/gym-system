@@ -80,6 +80,8 @@ export function useEstadisticas() {
                 pagosDelMes: pagosDelMes.length,
                 pagosVencidos: pagosVencidos.length,
                 pagosPorVencer: pagosPorVencer.length,
+                pagosPagados: pagosPagados.length,
+                pagosPendientes: pagosPendientes.length,
                 ultimosPagos: pagos.slice(0, 5),
             });
 
