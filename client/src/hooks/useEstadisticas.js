@@ -7,6 +7,8 @@ export function useEstadisticas() {
         pagosDelMes: 0,
         pagosVencidos: 0,
         pagosPorVencer: 0,
+        pagosPagados: 0,
+        pagosPendientes: 0,
         ultimosPagos: [],
     });
 
@@ -64,6 +66,14 @@ export function useEstadisticas() {
                     pago.estado !== "PAGADO"
                 );
             });
+
+            const pagosPagados = pagos.filter(
+                (pago) => pago.estado === "PAGADO"
+            );
+
+            const pagosPendientes = pagos.filter(
+                (pago) => pago.estado === "PENDIENTE"
+            );
 
             setEstadisticas({
                 totalSocios: socios.length,
