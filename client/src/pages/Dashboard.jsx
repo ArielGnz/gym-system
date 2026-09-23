@@ -1,6 +1,8 @@
 import Layout from "../components/layout/Layout";
 import StatCard from "../components/common/StatCard";
 import WelcomeCard from "../components/dashboard/WelcomeCard";
+import EstadoCuotas from "../components/dashboard/EstadoCuotas";
+import UltimosPagos from "../components/dashboard/UltimosPagos";
 import {
     FaUsers,
     FaMoneyBill,
@@ -17,6 +19,8 @@ function Dashboard() {
         pagosDelMes,
         pagosVencidos,
         pagosPorVencer,
+        pagosPagados,
+        pagosPendientes,
         ultimosPagos,
         obtenerEstadisticas,
     } = useEstadisticas();
