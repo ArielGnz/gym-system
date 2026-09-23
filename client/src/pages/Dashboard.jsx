@@ -77,6 +77,12 @@ function Dashboard() {
                 <UltimosPagos pagos={ultimosPagos} />
             </div>
 
+            <EstadoCuotas
+                pagosPagados={pagosPagados}
+                pagosPendientes={pagosPendientes}
+                pagosVencidos={pagosVencidos}
+            />
+
         </Layout>
     );
 }
