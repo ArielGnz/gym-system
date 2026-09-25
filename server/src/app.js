@@ -5,6 +5,7 @@ const socioRoutes = require("./routes/socioRoutes");
 const sucursalRoutes = require("./routes/sucursalRoutes");
 const planRoutes = require("./routes/planRoutes");
 const pagoRoutes = require("./routes/pagoRoutes");
+const rutinaRoutes = require("./routes/rutinaRoutes");
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use("/socios", socioRoutes);
 app.use("/sucursales", sucursalRoutes);
 app.use("/planes", planRoutes);
 app.use("/pagos", pagoRoutes);
+app.use("/rutinas", rutinaRoutes);
 
 // app.post("/test", (req, res) => {
 //   res.json({
