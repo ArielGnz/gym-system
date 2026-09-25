@@ -23,7 +23,7 @@ const EstadoCuotas = ({
 
                 <div>
                     <div className="flex justify-between mb-1">
-                        <span>Pagados</span>
+                        <span>Pagados del mes</span>
                         <span className="font-semibold">
                             {pagosPagados}
                         </span>
