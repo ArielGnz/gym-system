@@ -33,11 +33,6 @@ const FormularioRutina = ({
 
         await guardarRutina();
 
-        setNombre("");
-        setDescripcion("");
-        setNivel("Principiante");
-        setDiasPorSemana("");
-        setSocioId("");
     };
 
     return (
