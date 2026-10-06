@@ -6,6 +6,7 @@ const sucursalRoutes = require("./routes/sucursalRoutes");
 const planRoutes = require("./routes/planRoutes");
 const pagoRoutes = require("./routes/pagoRoutes");
 const rutinaRoutes = require("./routes/rutinaRoutes");
+const ejercicioRoutes = require("./routes/ejercicioRoutes");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use("/sucursales", sucursalRoutes);
 app.use("/planes", planRoutes);
 app.use("/pagos", pagoRoutes);
 app.use("/rutinas", rutinaRoutes);
+app.use("/ejercicios", ejercicioRoutes);
 
 // app.post("/test", (req, res) => {
 //   res.json({
