@@ -3,6 +3,7 @@ const Sucursal = require("./SucursalModel");
 const Plan = require("./Plan");
 const Pago = require("./Pago"); 
 const Rutina = require("./Rutina");
+const Ejercicio = require("./Ejercicio");
 
 Sucursal.hasMany(Socio, {
   foreignKey: "sucursalId",
@@ -52,10 +53,20 @@ Rutina.belongsTo(Socio, {
     foreignKey: "socioId",
 });
 
+Rutina.hasMany(Ejercicio, {
+    foreignKey: "rutinaId",
+    onDelete: "CASCADE",
+});
+
+Ejercicio.belongsTo(Rutina, {
+    foreignKey: "rutinaId",
+});
+
 module.exports = {
   Socio,
   Sucursal,
   Plan,
   Pago,
   Rutina,
+  Ejercicio,
 };
