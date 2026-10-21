@@ -7,6 +7,7 @@ const planRoutes = require("./routes/planRoutes");
 const pagoRoutes = require("./routes/pagoRoutes");
 const rutinaRoutes = require("./routes/rutinaRoutes");
 const ejercicioRoutes = require("./routes/ejercicioRoutes");
+const asistenciaRoutes = require("./routes/AsistenciaRoutes");
 
 const app = express();
 
@@ -21,7 +22,7 @@ app.use("/planes", planRoutes);
 app.use("/pagos", pagoRoutes);
 app.use("/rutinas", rutinaRoutes);
 app.use("/ejercicios", ejercicioRoutes);
-
+app.use("/asistencias", asistenciaRoutes);
 // app.post("/test", (req, res) => {
 //   res.json({
 //     mensaje: "Ruta funcionando",
