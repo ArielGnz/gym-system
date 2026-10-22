@@ -5,7 +5,7 @@ const {
     obtenerAsistencias,
     registrarAsistencia,
     eliminarAsistencia,
-} = require("../controllers/AsistenciaController");
+} = require("../controllers/asistenciaControllers");
 
 router.get("/", obtenerAsistencias);
 router.post("/", registrarAsistencia);
