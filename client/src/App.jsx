@@ -5,7 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Planes from './pages/Planes';
 import Pagos from './pages/Pagos';
 import Sucursales from './pages/Sucursales';
-import Rutinas from './pages/Rutinas';
+//import Rutinas from './pages/Rutinas';
 import Asistencias from './pages/Asistencias';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Route path="/planes" element={<Planes />} />
       <Route path="/pagos" element={<Pagos />} />
       <Route path="/sucursales" element={<Sucursales />} />
-      <Route path="/rutinas" element={<Rutinas />} />
+      {/* <Route path="/rutinas" element={<Rutinas />} /> */}1
       <Route path="/asistencias" element={<Asistencias />} />
     </Routes>
   );
