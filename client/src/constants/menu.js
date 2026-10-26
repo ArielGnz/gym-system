@@ -21,11 +21,11 @@ export const menu = [
       ruta: "/asistencias",
       icono: FaClipboardCheck,
     },
-    {
-      nombre: "Rutinas",
-      ruta: "/rutinas",
-      icono: FaDumbbell,
-    },
+    // {
+    //   nombre: "Rutinas",
+    //   ruta: "/rutinas",
+    //   icono: FaDumbbell,
+    // },
     {
     nombre: "Sucursales",
     ruta: "/sucursales",
